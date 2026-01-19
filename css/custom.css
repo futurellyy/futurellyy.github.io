@@ -1,0 +1,46 @@
+/* 统一背景设置，确保首页和页脚无缝衔接 */
+
+/* 确保整个页面背景统一 */
+#web_bg {
+  background-image: url(/img/star.png) !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 确保页脚背景与主页面背景一致 */
+#footer {
+  background-image: url(/img/star.png) !important;
+  background-attachment: fixed !important;
+  background-position: center bottom !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+
+/* 移除页脚的默认背景色覆盖层，确保背景图片可见 */
+#footer:before {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+/* 确保主内容区域和页脚之间没有间隙 */
+#content-inner,
+.layout {
+  margin-bottom: 0 !important;
+}
+
+/* 确保页脚与内容区域无缝连接 */
+#footer-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* 如果页脚有遮罩层，调整透明度以显示背景 */
+#footer .footer-mask {
+  opacity: 0.3 !important;
+}
+
